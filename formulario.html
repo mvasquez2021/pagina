@@ -35,11 +35,12 @@
 <body>
     <form>
         <!-- <input name="name" placeholder="patron" type="text" pattern="[A-Za-z0-9]{2,4}" required>
-        <input name="name" placeholder="patron" type="text" pattern="[A-Za-z0-9]{2,4}" required> 
+        <input name="name" placeholder="patron" type="text" pattern="[^A-Za-z0-9]{2,4}" required> el simbolo ^ es exclusion, {2,4} entre 2 y 4 caracteres
         <input type="email" name="" id="" required> -->
         <div>
             <label for="name">Nombre y apellido</label>
             <input readonly value="valor por defecto" minlength="4" maxlength="10" id="name" name="name" placeholder="Nombre y apellido" type="text" required>
+            <!--<input disabled o readonly value="valor por defecto" minlength="4" maxlength="10" id="name" name="name" placeholder="Nombre y apellido" type="text" required> -->
         </div>
         <div>
             <label for="age">Edad</label>
@@ -97,6 +98,12 @@
                 <option value="3">Cereza</option>
             </select>
         </div>
+        <div>
+            <div>
+                <label for="commnet">Comentarios</label>
+            </div>
+            <textarea name="commnet" id="commnet" cols="30" rows="10"></textarea>
+          </div>
         <div>
             <button type="submit">ENVIAR</button>
             <button type="reset">RESET</button>

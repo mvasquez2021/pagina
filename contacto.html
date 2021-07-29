@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,90 +8,143 @@
     <meta name="descripction" content="Esta es la descrupcion de la pagina" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./favicom.jpg" type="image/x.icon" />
-</head>
-<body>
+    <style>
+      input:focus {
+        outline: none;
+      }
+
+      input:focus:invalid {
+        border: 1px solid red;
+      }
+
+      input:valid {
+        border: 1px solid green;
+      }
+
+      textarea:focus {
+        outline: none;
+      }
+
+      textarea:focus:invalid {
+        border: 1px solid red;
+      }
+
+      textarea:valid {
+        border: 1px solid green;
+      }
+    </style>
+  </head>
+  <body>
     <!--Header-->
     <header>
-        <a href = "./"><strong>ULTIMAS NOTICIAS</strong></a>
-        <hr />
-        <nav>
-          <ul>
-            <li>
-              <!--para abrirlo en otra pestaña-->
-              <a href="deportes.html"target="_blank" >Deportes</a>
-            </li>
-            <li>
-              <a href="humor.html">Humor</a>
-            </li>
-            <li>
-              <a href="espectaculo.html">Espectáculo</a>
-            </li>
-            <li>
-              <a href="contacto.html">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    <form>
-        <div>
-            <label for="name">Nombre y apellido</label>
-            <input id="name" name="name" placeholder="Nombre y apellido" type="text" required>
-        </div>
-        <div>
-            <label for="age">Edad</label>
-            <input id="age" name="age" placeholder="años" min="18" max="34" type="number" required>
-        </div>
-        <div>
-            <label for="date">Fecha de nacimiento</label>
-            <input id="date" name="date" type="date" required>
-        </div>
-        <div>
-            <label for="color">Elige tu color favorito</label>
-            <input id="color" name="color" type="color" required>
-        </div>
-        <div>
-            <label for="email">Correo</label>
-            <input id="email" name="email" type="email" required>
-        </div>
-        <div>
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password">
-        </div>
-        <div>
-            <h2>Sexo</h2>
-            <input type="radio" name="sex" value="f" id="sexf" checked>
-            <label for="sexf">F</label>
-            <input type="radio" name="sex" value="m" id="sexm">
-            <label for="sexm">M</label>
-        </div>
-        <div>
-            <h2>Intereses</h2>
-            <input type="checkbox" id="tech" value="tech" checked><label for="tech">Tecnologia</label>
-            <input type="checkbox" id="politic" value="politic" checked><label for="politic">Politica</label>
-            <input type="checkbox" id="moda" value="moda" checked><label for="moda">Moda</label>
-        </div>
-        <div>
+      <a href="./"><strong>ULTIMAS NOTICIAS</strong></a>
+      <hr />
+      <nav>
+        <ul>
+          <li>
+            <!--para abrirlo en otra pestaña-->
+            <a href="deportes.html" target="_blank">Deportes</a>
+          </li>
+          <li>
+            <a href="humor.html">Humor</a>
+          </li>
+          <li>
+            <a href="espectaculo.html">Espectáculo</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--Main-->
+    <main>
+      <section>
+        <h1>CONTACTO</h1>
+        <form>
+          <div>
+            <!--<label for="name">Nombre y apellido:</label>-->
+            <h2>Nombres y Apellidos</h2>
+            <input
+              id="name"
+              name="name"
+              placeholder="Nombres y apellidos"
+              type="text"
+              required
+            />
+          </div>
+          <div>
+            <h2>Edad</h2>
+            <input
+              id="age"
+              name="age"
+              placeholder="años"
+              min="18"
+              max="50"
+              type="number"
+              required
+            />
+          </div>
+          <div>
+            <!--<label for="email">Correo electrónico:</label> -->
+            <h2>Correo Electrónico</h2>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div>
             <h2>Pais</h2>
             <select name="" id="" required>
-                <option value="">SELECCIONAR</option>
-                <option value="1">Peru</option>
-                <option value="2">Argentina</option>
-                <option value="3">Chile</option>
+              <option value="">SELECCIONAR</option>
+              <option value="1">Peru</option>
+              <option value="2">Argentina</option>
+              <option value="3">Chile</option>
             </select>
-        </div>
-        <div>
-            <h2>FRUTAS</h2>
-            <select name="" id="" multiple required>
-                <option value="1">Manzana</option>
-                <option value="2">Pera</option>
-                <option value="3">Cereza</option>
-            </select>
-        </div>
-        <div>
-            <button type="submit">ENVIAR</button>
-            <button type="reset">RESET</button>
-        </div>
-    </form>
-    
-</body>
+          </div>
+          <div>
+            <h2>Sexo</h2>
+            <input type="radio" name="sex" value="f" id="sexf" checked />
+            <label for="sexf">Femenino</label>
+            <input type="radio" name="sex" value="m" id="sexm" />
+            <label for="sexm">Masculino</label>
+          </div>
+          <div>
+            <h2>Intereses</h2>
+            <input type="checkbox" id="tech" value="tech" checked /><label
+              for="tech"
+              >Tecnologia</label
+            >
+            <input type="checkbox" id="politic" value="politic" checked /><label
+              for="politic"
+              >Politica</label
+            >
+            <input type="checkbox" id="moda" value="moda" checked /><label
+              for="moda"
+              >Moda</label
+            >
+          </div>
+          <div>
+            <h2>Comentarios</h2>
+            <textarea
+              name="commnet"
+              id="commnet"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div>
+            <button type="submit">Registrar</button>
+            <button type="reset">Limpiar</button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <h2>UBICANOS</h2>
+        <p>Dirección: Ariosto Matellini 123 Chorrillos</p>
+        <p>Lima - Perú</p>
+        <p>Teléfono: 996391647</p>
+        <figure>
+            <img src="https://picsum.photos/200/300?random=1" />
+          </figure>
+      </section>
+    </main>
+  </body>
 </html>
